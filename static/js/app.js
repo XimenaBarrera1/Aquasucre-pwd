@@ -53,7 +53,7 @@ function abrir(o) {
   $('detalle').hidden = false;
   $('datos').innerHTML = `<h2>OT #${o.id_ot}</h2><p><b>PQR:</b> ${o.id_pqr || ''}</p><p><b>Servicio:</b> ${o.tipo_servicio || ''}</p><p><b>Descripción:</b> ${o.descripcion || ''}</p><p><b>Dirección:</b> ${o.direccion || ''}</p><p><b>Prioridad:</b> ${o.prioridad || ''}</p><p><b>Estado:</b> ${o.estado}</p>`;
   $('btnIniciar').hidden = o.estado !== 'ASIGNADA';
-  $('form').hidden = o.estado !== 'EN_PROCESO';
+  $('form').hidden = o.estado !== 'EN_ATENCION';
   $('diagnostico').value = o.diagnostico || '';
   $('trabajo').value = o.trabajo_realizado || '';
   $('observaciones').value = o.observaciones || '';
